@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "0e582739-5d26-4e37-bd07-ecc7e696afec",
+		"name": "Abm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9911355"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Guardar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n \"paterno\":\"HUANCA\",\n \"materno\":\"NAVIA\",\n \"nombres\":\"JOSE LUIS\",\n \"ci\":4890456,\n \"item\":1095,\n \"cargo\":\"SUPERVISOR DE SISTEMAS\",\n \"n_id_area\":3,\n \"departamento\":\"SISTEMAS\",\n \"division\":\"DESARROLLO\",\n \"eventual\":0,\n \"fecha_inicio\":null,\n \"fecha_final\":null,\n \"n_id_sucursal\":1,\n \"telefonos\":\"67123445-2210558\",\n \"interno\":1020,\n \"n_id_solicitud\":1,\n \"aplicaciones\":[{\"n_id\":1},{\"n_id\":3}],\n \"otro\":null,\n \"rol\":\"RUBEN MAMANI\",\n \"modulo\":\"CICE\",\n \"funcionalidad\":\"REGISTRAR Y EDITAR DATOS DE CORRESPONDENCIA\",\n \"obs\":\"ALGUNOS DATOS SON OBLIGATORIOS\",\n \"firma_solicitante\":1,\n \"firma_gerente\":1,\n \"gerente\":\"ISRAEL LUCANA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-abm}}/api/usuario",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n \"paterno\":\"VILLA\",\n \"materno\":\"LOZA\",\n \"nombres\":\"JOSE ANDRES\",\n \"ci\":48434323,\n \"item\":909,\n \"cargo\":\"ANALISTA DE SISTEMAS\",\n \"n_id_area\":3,\n \"departamento\":\"SISTEMAS\",\n \"division\":\"DESARROLLO\",\n \"eventual\":0,\n \"fecha_inicio\":null,\n \"fecha_final\":null,\n \"n_id_sucursal\":1,\n \"telefonos\":\"67123445-2210558\",\n \"interno\":1020,\n \"n_id_solicitud\":1,\n \"aplicaciones\":[{\"n_id\":1},{\"n_id\":2}],\n \"otro\":null,\n \"rol\":\"RUBEN MAMANI\",\n \"modulo\":\"CATASTRO\",\n \"funcionalidad\":\"REGISTRAR Y EDITAR DATOS DE USUARIOS\",\n \"obs\":\"ALGUNOS DATOS SON OBLIGATORIOS\",\n \"firma_solicitante\":1,\n \"firma_gerente\":1,\n \"gerente\":\"ISRAEL LUCANA\",\n \"fecha_hora_recepcion\":\"2023-01-10 15:13:02\",\n \"nro_mesa_ayuda\":2323,\n \"recibio\":\"ABRAHAM YANA\",\n \"firma_recibio\":0,\n \"obs_recibio\":\"TODO CORRECTO\",\n \"ejecuciones\":[{\"fecha_ejecucion\":\"2022-01-11\",\"nombre\":\"JOSE LUIS HUANCA\",\"numero\":1},\n               {\"fecha_ejecucion\":\"2022-01-11\",\"nombre\":\"FREDDY GARCIA MASSA\",\"numero\":2}],\n \"obs_ejecucion\":\"SE HICIERON TODAS LAS OBSERVACIONES CORRESPONDIENTES DE EJECUCION\",\n \"fecha\":\"2023-01-12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-abm}}/api/usuario/3",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"usuario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista de usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-abm}}/api/usuario",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-abm}}/api/usuario/1",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url-abm}}/api/usuario/4",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"usuario",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parametrica",
+			"item": [
+				{
+					"name": "TIpos Solicitud",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-abm}}/api/solicitud",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"solicitud"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Areas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-abm}}/api/area",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"area"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aplicacion",
+			"item": [
+				{
+					"name": "Obtener todas aplicaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-abm}}/api/aplicacion",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"aplicacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener una aplicacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-abm}}/api/aplicacion/1",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"aplicacion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar una aplicacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"descripcion\":\"APP-MOVIL\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-abm}}/api/aplicacion",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"aplicacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar una aplicacion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"descripcion\":\"APP-MOVIL\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-abm}}/api/aplicacion/9",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"aplicacion",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarAplicacion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"descripcion\":\"APP-MOVIL\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-abm}}/api/aplicacion/9",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"aplicacion",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sucursal",
+			"item": [
+				{
+					"name": "Obtener todas sucursales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-abm}}/api/sucursal",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"sucursal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar una sucursal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"descripcion\":\"SAN JORGE\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-abm}}/api/sucursal",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"sucursal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener una sucursal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-abm}}/api/sucursal/1",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"sucursal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar una sucursal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"descripcion\":\"VILLA FATIMA\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-abm}}/api/sucursal/1",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"sucursal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Sucursal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"descripcion\":\"APP-MOVIL\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-abm}}/api/sucursal/5",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"sucursal",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reporte",
+			"item": [
+				{
+					"name": "AbmReporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-abm}}/api/reporte-abm/3",
+							"host": [
+								"{{url-abm}}"
+							],
+							"path": [
+								"api",
+								"reporte-abm",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
